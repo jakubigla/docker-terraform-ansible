@@ -11,6 +11,4 @@ RUN apk add --update wget ca-certificates unzip python py-pip openssl && \
     apk del build-dependencies && \
     rm -rf /var/cache/apk/* /terraform.zip
 
-ENTRYPOINT ["/bin/terraform"]
-
-CMD ["--help"]
+ENTRYPOINT ["tail -F -n0 /etc/hosts"]
