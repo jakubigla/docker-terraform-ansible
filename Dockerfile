@@ -12,3 +12,4 @@ RUN apk add --update wget ca-certificates unzip python py-pip openssl && \
     rm -rf /var/cache/apk/* /terraform.zip
 
 ENTRYPOINT ["tail"]
+CMD ["-f", "/etc/hosts"]
